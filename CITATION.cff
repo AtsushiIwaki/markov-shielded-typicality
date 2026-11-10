@@ -1,0 +1,22 @@
+cff-version: "1.2.0"
+message: "If you use this software in your research, please cite the paper below."
+title: "Markov-shielded typicality for 1D spin chains"
+type: software
+authors:
+  - family-names: Iwaki
+    given-names: Atsushi
+repository-code: "https://github.com/AtsushiIwaki/markov-shielded-typicality"
+license: MIT
+preferred-citation:
+  type: article
+  title: "Markov-Shielded Typicality for Thermal Quantum States"
+  authors:
+    - family-names: Iwaki
+      given-names: Atsushi
+    - family-names: Hotta
+      given-names: Chisa
+  year: 2026
+  url: "https://arxiv.org/abs/2611.10593"
+  identifiers:
+    - type: other
+      value: "arXiv:2611.10593"

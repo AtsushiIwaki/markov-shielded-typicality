@@ -2,8 +2,16 @@
 
 This repository contains the Markov-shielded typical matrix product state
 (MST-MPS) implementation for the one-dimensional transverse-field Ising model
-with open boundaries. The shared Julia routines are in `src/`. The temperature
-sweep and plotting commands are in `scripts/`.
+with open boundaries. The method and numerical demonstrations are described in
+[*Markov-Shielded Typicality for Thermal Quantum States*](https://arxiv.org/abs/2611.10593).
+
+The Julia implementation uses [ITensors.jl](https://github.com/ITensor/ITensors.jl)
+and [ITensorMPS.jl](https://github.com/ITensor/ITensorMPS.jl) for tensor and MPS
+operations and [Optim.jl](https://github.com/JuliaNLSolvers/Optim.jl) for
+single-site tensor optimization with BFGS.
+
+The shared Julia routines are in `src/`. The temperature sweep, entanglement
+analysis, and plotting scripts are in `scripts/`.
 
 ## Setup
 
@@ -116,6 +124,26 @@ Matching states are reused even when `--num_sweeps`, `--num_iterations`, or
 `--free_energy_tolerance` changes. To recompute all states with different
 optimization settings, move the existing `results/` directory aside before
 running the calculation again.
+
+## Citation
+
+If you use this code in your research, please cite Atsushi Iwaki and Chisa
+Hotta, *Markov-Shielded Typicality for Thermal Quantum States* (2026).
+[arXiv:2611.10593](https://arxiv.org/abs/2611.10593)
+
+```bibtex
+@misc{iwaki2026markovshielded,
+  author        = {Iwaki, Atsushi and Hotta, Chisa},
+  title         = {{Markov-Shielded Typicality for Thermal Quantum States}},
+  year          = {2026},
+  eprint        = {2611.10593},
+  archivePrefix = {arXiv},
+  primaryClass  = {cond-mat.stat-mech},
+  url           = {https://arxiv.org/abs/2611.10593}
+}
+```
+
+Machine-readable citation metadata is available in [CITATION.cff](CITATION.cff).
 
 ## License
 
